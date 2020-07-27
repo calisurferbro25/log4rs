@@ -485,7 +485,7 @@ impl<'a> From<Piece<'a>> for Chunk {
                     };
 
                     Chunk::Formatted {
-                        chunk: FormattedChunk::Mdc(key, default),
+                        chunk: FormattedChunk::Mdc(key, serde_json::value::Value::Null),
                         params: parameters,
                     }
                 }
@@ -540,7 +540,7 @@ enum FormattedChunk {
     Newline,
     Align(Vec<Chunk>),
     Highlight(Vec<Chunk>),
-    Mdc(String, String),
+    Mdc(String, serde_json::value::Value),
 }
 
 impl FormattedChunk {
