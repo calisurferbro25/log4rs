@@ -59,7 +59,7 @@ flate2 = { version = "1.0", optional = true }
 fnv = "1.0"
 humantime = { version = "1.0", optional = true }
 log = { version = "0.4.0", features = ["std"] }
-log-mdc = { version = "0.1", optional = true, path = "../rust-log-mdc" }
+log-mdc = { version = "0.1", optional = true, git = "https://github.com/calisurferbro25/rust-log-mdc", branch = "val_serialize" }
 serde = { version = "1.0", optional = true }
 serde_derive = { version = "1.0", optional = true }
 serde-value = { version = "0.6", optional = true }
